@@ -15,12 +15,32 @@ class AppTest {
         App classUnderTest = new App();
         assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
     }
-    @Test void testingForNull() {
-    //Arrange
+//    @Test void testingForNull() {
+//    //Arrange
+//
+//    //Act
+//
+//    //Assert
+//    assertTrue(testArray != null);
+//    }
+    @Test
+    void testingQuotesConstructor() {
+        // Arrange
+        // Act
+        Quotes testQuotes = new Quotes("Charles Dickens", "Ask no questions, and you'll be told no lies.");
+        // Assert
+        assertEquals("Ask no questions, and you'll be told no lies.", testQuotes.getText());
+        assertEquals("Charles Dickens", testQuotes.getAuthor());
 
-    //Act
+    }
 
-    //Assert
-    assertTrue(testArray != null);
+    @Test
+    void testingRSQuotesConstructor() {
+        // Arrange
+        // Act
+        RSQUOTES testRS = new RSQUOTES("Capitalism: God's way of determining who is smart and who is poor.");
+        // Assert
+        assertEquals("Capitalism: God's way of determining who is smart and who is poor.", testRS.getQuote());
     }
 }
+
